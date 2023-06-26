@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fred's "Game of Life"</title>
+
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./automata.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <img src="anya_smug.png" id="emoji" style="display: none;"></img>
+</head>
+<body>
+    <canvas id="gameWorld" width="1600" height="800" style="background: rgb(50, 50, 50); border: 1px solid black"></canvas>
+    <div>
+        <div id="ticks">Ticks: 0</div>
+        <label for="speed">Fast</label>
+        <input type="range" id="speed" min="1" max="120" value="30" step="1">
+        <label for="speed">Slow</label>
+        <div id="cell_size">
+            <label id="cell_size_label">Cell Size: 8</label>
+            <form id="cell_size">
+                <label for="size">Select between 5 and 50: </label>
+                <input type="number" id="size" name = "cell size" min="5" max="50" value="8">
+            </form>
+        </div>
+        <div>Tried to make the canvas draggable but failed. Currently the canvas can only zoom into the top left corner.</div>
+    </div>
+</body>
+</html>
